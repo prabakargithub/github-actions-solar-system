@@ -42,3 +42,7 @@ jobs:
       environment:
         name: development
         url: ${{ steps.deploy.outputs.url }}
+      steps:
+      - name: Deploy to staging
+        id: deploy
+        run: ./deploy-script.sh
