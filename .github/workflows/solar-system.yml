@@ -36,3 +36,9 @@ jobs:
           with:
             name: Mocha-Test-Result
             path: test-results.xml
+          
+    dev-deploy:
+      runs-on: ubuntu-latest
+      environment:
+        name: development
+        url: ${{ steps.deploy.outputs.url }}
